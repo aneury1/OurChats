@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.aneury1.ourchat.Data.ChatMessage
 import com.aneury1.ourchat.Screen.ChatBubble
 import com.aneury1.ourchat.Screen.ChatScreenWithList
+import com.aneury1.ourchat.Screen.FullChatScreen
 import com.aneury1.ourchat.ui.theme.OurChatTheme
 
 class MainActivity : ComponentActivity() {
@@ -70,7 +71,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         ChatMessage(3, "Doing great, thanks for asking.", false),
         ChatMessage(4, "Let's catch up later.", true)
     )
-    ChatScreenWithList(sampleMessages)
+    ///ChatScreenWithList(sampleMessages)
+    FullChatScreen()
 }
 
 @Preview(showBackground = true)
