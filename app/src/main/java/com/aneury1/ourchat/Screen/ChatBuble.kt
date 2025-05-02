@@ -40,15 +40,31 @@ fun ChatBubble(message: ChatMessage) {
                 .padding(12.dp)
         ) {
             Column{
-                Text(
-                    "USERNAME",
-                    modifier = Modifier.padding(10.dp),
-                    fontWeight = FontWeight.Black,
-                    color=Color(0xFF0b7327))
+
+               Row{
+                   if(message.isFromUser or true){
+                       Avatar()
+                   }
+                   Text(
+                       "USERNAME",
+                       modifier = Modifier.padding(10.dp),
+                       fontWeight = FontWeight.Black,
+                       color=Color(0xFF0b7327))
+               }
+
+
+
+
                 Text(
                     text = message.text,
                     color = Color.Black,
                     fontSize = 16.sp
+                )
+                Text(
+                    text = message.timestamp,
+                    fontSize = 10.sp,
+                    color = Color.Gray,
+                    modifier = Modifier.padding(start = 4.dp, end = 4.dp, top = 2.dp)
                 )
             }
 
